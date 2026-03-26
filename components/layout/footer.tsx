@@ -17,6 +17,8 @@ const footerLinks = {
     { name: "Golf Carts", href: "/products/golf-carts" },
     { name: "Sightseeing Vehicles", href: "/products/sightseeing" },
     { name: "Specialty Trucks", href: "/products/specialty" },
+    { name: "EV Kartboat", href: "/products/ev-kartboat" },
+    { name: "EV Surfboard", href: "/products/ev-surfboard" },
     { name: "Accessories", href: "/products/accessories" },
   ],
   support: [
@@ -69,7 +71,7 @@ export function Footer() {
             <ul className="space-y-4 text-sm">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary shrink-0" />
-                <span>No.123 Qibei Branch Road, Yuqi Town, Wuxi, Jiangsu, China</span>
+                <span>No 9 Xingyuan Road, Zhenlong Village, Yangxiang Town, Yixing, China</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-primary shrink-0" />

@@ -23,7 +23,7 @@ export function Header() {
           <Link href="/" className="flex items-center h-full">
             <Image 
               src="/EVFMX-transparent.jpg" 
-              alt="EVFMX Logo" 
+              alt="EVFMX Logo"
               width={160} 
               height={50} 
               className="h-full w-auto object-contain"

@@ -103,8 +103,8 @@ export default function HomePage() {
             Jiangsu FMX Electric Vehicle
           </Badge>
           <h1 className="text-5xl md:text-8xl font-black tracking-tighter mb-8 leading-none [text-shadow:0_0_20px_var(--color-primary)]">
-            DRIVING THE <br />
-            <span className="italic">GREEN TECH</span> REVOLUTION
+            LOW-SPEED <br />
+            <span className="italic">ELECTRIC</span> MOBILITY
           </h1>
           <p className="max-w-3xl mx-auto text-lg md:text-2xl text-slate-200 mb-12 font-light drop-shadow-md">
             Advanced manufacturing meets sustainable mobility. Premium electric vehicles
@@ -130,9 +130,14 @@ export default function HomePage() {
       {/* --- 2. 保持原有的三个产品展示 --- */}
       <section className="py-24 bg-background">
         <div className="container px-4 mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-black text-slate-900 uppercase tracking-tighter">Specialized Electric Fleet</h2>
-            <div className="h-1 w-20 bg-primary mx-auto mt-4" />
+          <div className="text-center mb-16 space-y-2">
+            <Badge variant="outline" className="text-primary border-primary px-4 py-1 tracking-widest">
+              TERRAIN: LAND
+            </Badge>
+            <h2 className="text-4xl md:text-5xl font-black tracking-tight text-slate-900 uppercase">
+              Specialized Land Mobility
+            </h2>
+            <div className="h-1.5 w-24 bg-primary mx-auto rounded-full" />
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
@@ -162,6 +167,63 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* --- WATER MOBILITY SECTION (Large Side-by-Side Layout) --- */}
+<section className="py-24 bg-slate-50">
+  <div className="container px-4 mx-auto">
+    <div className="text-center mb-16 space-y-2">
+      <Badge variant="outline" className="text-primary border-primary px-4 py-1 tracking-widest">
+        TERRAIN: WATER
+      </Badge>
+      <h2 className="text-4xl md:text-5xl font-black tracking-tight text-slate-900 uppercase">
+        Cross-Scene Water Mobility
+      </h2>
+      <div className="h-1.5 w-24 bg-primary mx-auto rounded-full" />
+    </div>
+
+    {/* 保持 2 列布局，但通过 max-w-7xl 允许更大的展开空间 */}
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 max-w-7xl mx-auto">
+      {[
+        {
+          title: "Go-Kart Style E-Boat",
+          desc: "Experience the thrill of racing on water. High-torque electric propulsion meets agile hull design for ultimate recreational performance.",
+          img: "https://placehold.co/800x600?text=Go-Kart+E-Boat",
+        },
+        {
+          title: "Electric Surfboard",
+          desc: "Master the waves with zero-emission jet technology. Lightweight carbon fiber construction for maximum speed and control.",
+          img: "https://placehold.co/800x600?text=E-Surfboard",
+        },
+      ].map((item, index) => (
+        <Card key={index} className="flex flex-col xl:flex-row items-stretch overflow-hidden border border-border group rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 bg-white min-h-[320px]">
+          
+          {/* 左侧图片：占比 45%，使用比之前更大的固定高度或比例 */}
+          <div className="relative w-full xl:w-[45%] aspect-[4/3] xl:aspect-auto overflow-hidden shrink-0">
+            <Image
+              src={item.img}
+              alt={item.title}
+              fill
+              className="object-cover transition-transform duration-700 group-hover:scale-110"
+              unoptimized
+            />
+          </div>
+
+          {/* 右侧文字：增加内边距和字号以增强比重 */}
+          <CardContent className="flex flex-col justify-center flex-1 p-8 lg:p-10 space-y-4">
+            <h3 className="text-2xl md:text-3xl font-black text-slate-900 uppercase tracking-tighter leading-tight">
+              {item.title}
+            </h3>
+            <p className="text-base md:text-lg text-slate-600 leading-relaxed italic border-l-4 border-primary/20 pl-6">
+              {item.desc}
+            </p>
+            <div className="pt-2">
+               <span className="text-xs font-bold text-primary uppercase tracking-[0.2em]">Explore →</span>
+            </div>
+          </CardContent>
+        </Card>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* --- OUR BEST PRODUCTS (Infinite Auto-scroll) --- */}
       <section className="py-20 bg-white overflow-hidden border-b">
