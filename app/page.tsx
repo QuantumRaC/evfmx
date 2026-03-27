@@ -103,7 +103,7 @@ export default function HomePage() {
             Jiangsu FMX Electric Vehicle
           </Badge>
           <h1 className="text-5xl md:text-8xl font-black tracking-tighter mb-8 leading-none [text-shadow:0_0_20px_var(--color-primary)]">
-            LOW-SPEED <br />
+            SUSTAINABLE <br />
             <span className="italic">ELECTRIC</span> MOBILITY
           </h1>
           <p className="max-w-3xl mx-auto text-lg md:text-2xl text-slate-200 mb-12 font-light drop-shadow-md">
@@ -115,7 +115,7 @@ export default function HomePage() {
               Explore Our Fleet
             </Button>
             <Button size="lg" variant="outline" className="h-14 px-10 text-lg rounded-full border-2 hover:bg-white/10 text-white backdrop-blur-sm">
-              Contact Manufacturer
+              Contact Us
             </Button>
           </div>
         </div>
