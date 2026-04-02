@@ -4,26 +4,26 @@ import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { Zap, Factory, Droplets, Mountain } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { Header } from "@/components/layout/header";
+import { Button } from "@/components/ui/button"
 
 const coreValues = [
   {
-    icon: <Zap className="w-8 h-8 text-primary" />,
+    icon: <Zap className="w-8 h-8 text-base" />,
     title: "Innovation First",
     desc: "Advancing green mobility through cutting-edge new energy systems and sustainable engineering."
   },
   {
-    icon: <Factory className="w-8 h-8 text-primary" />,
+    icon: <Factory className="w-8 h-8 text-base" />,
     title: "Engineered Excellence",
     desc: "Precision manufacturing ensured by 120,000-watt laser cutting and robotic welding technologies."
   },
   {
-    icon: <Mountain className="w-8 h-8 text-primary" />,
+    icon: <Mountain className="w-8 h-8 text-base" />,
     title: "Land Mobility",
     desc: "Premium electric golf carts and UTVs designed for high-end performance and leisure."
   },
   {
-    icon: <Droplets className="w-8 h-8 text-primary" />,
+    icon: <Droplets className="w-8 h-8 text-base" />,
     title: "Water Mobility",
     desc: "Redefining low-speed aquatic transport with electric recreational boats and surfboards."
   },
@@ -35,7 +35,7 @@ export default function AboutUsPage() {
       <main className="flex-grow">
         {/* --- HERO SECTION: Bird-view Factory Image --- */}
         <section className="relative h-[65vh] flex items-center justify-center overflow-hidden bg-slate-900">
-          <div className="absolute inset-0 z-0 opacity-50">
+          <div className="absolute inset-0 z-0 opacity-60">
             <Image 
               src="/about-images/factory-birdview.jpg" 
               alt="Jiangsu FMX Manufacturing Facility Birdview"
@@ -50,7 +50,7 @@ export default function AboutUsPage() {
             </Badge>
             <h1 className="text-5xl md:text-8xl font-black uppercase tracking-tighter leading-none">
               ABOUT OUR <br />
-              <span className="text-primary italic">TECHNOLOGY</span>
+              <span className="italic">TECHNOLOGY</span>
             </h1>
             <p className="max-w-xl mx-auto text-sm md:text-base opacity-90 uppercase tracking-[0.3em] font-bold">
               Powering the Future of Electric Mobility
@@ -65,11 +65,12 @@ export default function AboutUsPage() {
               <h2 className="text-4xl md:text-6xl font-black text-slate-900 uppercase tracking-tight leading-none">
                 Innovation & Excellence
               </h2>
-              <div className="space-y-6 text-xl md:text-2xl text-slate-600 leading-relaxed italic border-l-8 border-primary/20 pl-8 md:pl-12 text-left">
+              <div className="mt-16 text-muted-foreground leading-relaxed text-lg border-l-4 border-primary/20 pl-6 italic">
                 <p>
                   Jiangsu FMX Electric Vehicle Co., Ltd. is based in Yixing, Wuxi, along the scenic Taihu Lake, and is dedicated to advancing green mobility through innovation, engineering, and manufacturing excellence.
                 </p>
                 <p className="font-bold text-slate-800 not-italic">
+                  <br />
                   We specialize in a diverse portfolio of electric mobility solutions, including premium electric golf carts, UTVs, recreational boats, and surfboards—designed for performance and sustainability.
                 </p>
               </div>
@@ -79,9 +80,9 @@ export default function AboutUsPage() {
 
         {/* --- MANUFACTURING EXCELLENCE: Inside Factory Image --- */}
         <section className="py-24 bg-slate-950 text-slate-100 relative overflow-hidden">
-          <div className="absolute inset-0 opacity-20">
+          <div className="absolute inset-0 opacity-30">
             <Image 
-              src="/about-images/factory-inside.jpg" 
+              src="/about-images/factory-inside.png" 
               alt="Inside FMX Factory Process"
               fill
               className="object-cover"
@@ -91,7 +92,7 @@ export default function AboutUsPage() {
             <div className="text-left space-y-4 max-w-3xl">
               <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tight text-white leading-none">
                 Premium Quality. <br />
-                <span className="text-primary italic">Engineered for Excellence.</span>
+                <span className=" italic">Engineered for Excellence.</span>
               </h2>
               <p className="text-lg text-slate-400 leading-relaxed">
                 Driven by a “quality-first” philosophy, we are committed to setting new benchmarks. Our facility features 120,000-watt laser cutting, robotic welding, and modern chassis assembly lines.
@@ -100,7 +101,7 @@ export default function AboutUsPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {coreValues.map((value, i) => (
-                <div key={i} className="bg-slate-900/80 backdrop-blur-sm p-10 space-y-6 border border-slate-800 transition-all hover:border-primary group">
+                <div key={i} className="bg-slate-10 backdrop-blur-sm p-10 space-y-6 border border-slate-800 transition-all hover:border-primary group">
                   <div className="flex justify-start">{value.icon}</div>
                   <h4 className="text-xl font-black uppercase text-white tracking-tight">{value.title}</h4>
                   <p className="text-sm leading-relaxed text-slate-400">{value.desc}</p>
